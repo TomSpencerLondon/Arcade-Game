@@ -18,4 +18,4 @@ $ open index.html
 - User can increase level and score
 - Message displays when user is caught
 
-![alt text](http://https://github.com/TomSpencerLondon/Arcade-Game/images/gameView.png)
+![alt text](images/gameView.png)
