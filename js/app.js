@@ -75,16 +75,16 @@ Player.prototype.render = function() {
 
 Player.prototype.handleInput = function(keyPress) {
     if (keyPress == 'left') {
-        player.x -= player.speed;
+        this.x -= this.speed;
     }
     if (keyPress == 'up') {
-        player.y -= player.speed - 20;
+        this.y -= this.speed - 20;
     }
     if (keyPress == 'right') {
-        player.x += player.speed;
+        this.x += this.speed;
     }
     if (keyPress == 'down') {
-        player.y += player.speed - 20;
+        this.y += this.speed - 20;
     }
     // console.log('keyPress is: ' + keyPress);
     console.log('player position is: ' + 'x =' + this.x + ' y =' + this.y)
@@ -93,25 +93,25 @@ Player.prototype.handleInput = function(keyPress) {
 Player.prototype.checkCollision = function(anEnemy) {
 
     if (
-        player.y + 131 >= anEnemy.y + 90
-        && player.x + 25 <= anEnemy.x + 88
-        && player.y + 73 <= anEnemy.y + 135
-        && player.x + 76 >= anEnemy.x + 11) {
+        this.y + 131 >= anEnemy.y + 90
+        && this.x + 25 <= anEnemy.x + 88
+        && this.y + 73 <= anEnemy.y + 135
+        && this.x + 76 >= anEnemy.x + 11) {
         openModal();
-        player.x = 202.5;
-        player.y = 383;
+        this.x = 202.5;
+        this.y = 383;
         score = 0;
         gameLevel = 1;
     }
 
-if (player.y > 420) {
-    player.y = 420;
+if (this.y > 420) {
+    this.y = 420;
 }
-if (player.x > 400) {
-    player.x = 400;
+if (this.x > 400) {
+    this.x = 400;
 }
-if (player.x < 2.5) {
-    player.x = 2.5;
+if (this.x < 2.5) {
+    this.x = 2.5;
 }  
 
 };
